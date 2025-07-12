@@ -49,7 +49,7 @@ function App() {
 
   return (
     <>
-      <div className='flex justify-center items-center flex-col w-[100vw] h-[100vh] font-bold  text-4xl bg-gradient-to-r from-[hsl(276,87%,27%)] via-[#FD1D1D] to-[#FCB045] gap-1 text-[#4a0351cc]'>
+      <div className='flex justify-center items-center flex-col font-bold  text-4xl  w-screen h-screen bg-gradient-to-r from-[hsl(276,87%,27%)] via-[#FD1D1D] to-[#FCB045] gap-1 text-[#4a0351cc]'>
         {isWinner ?
           <>
             <div>{isWinner} won the game</div>
@@ -58,7 +58,7 @@ function App() {
           :
           <>
             <h3>{checkTie()? "No one won":{isX} ? "X turn" : "O turn"}</h3>
-            <div className=' border-none flex justify-between  gap-1.5'>
+            <div className=' border-none flex justify-between gap-1.5'>
               <Square onClick={() => handleClick(0)} value={val[0]} />
               <Square onClick={() => handleClick(1)} value={val[1]} />
               <Square onClick={() => handleClick(2)} value={val[2]} />
